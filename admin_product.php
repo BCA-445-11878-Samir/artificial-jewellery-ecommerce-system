@@ -2,11 +2,9 @@
     include 'connection.php';
     session_start();
     $admin_id = $_SESSION['admin_name'];
-
     if (!isset($admin_id)) {
         header('location:login.php');
     }
-   
     if (isset($_POST['logout'])) {
         session_destroy();
         header('location:login.php');
@@ -20,7 +18,6 @@
         $image_size = $_FILES['image']['size'];
         $image_tmp_name = $_FILES['image']['tmp_name'];
         $image_folder = 'image/'.$image;
-
         $select_product_name = mysqli_query($conn, "SELECT name FROM `products`WHERE name = '$product_name'") or die ('query failed');
         if(mysqli_num_rows($select_product_name) > 0) {
             $message[] = 'product name already exist';
@@ -32,26 +29,21 @@
                 }else {
                     move_uploaded_file($image_tmp_name, $image_folder);
                     $message[] = 'product added successfully';
-                }
-                
+                }            
             }
         }
     }
-
     //delete products to database
     if (isset($_GET['delete'])) {
         $delete_id = $_GET['delete'];
         $select_delete_image = mysqli_query($conn, "SELECT image FROM `products` WHERE id = '$delete_id'") or die ('query failed');
         $fetch_delete_image = mysqli_fetch_assoc($select_delete_image);
         unlink('image/'.$fetch_delete_image['image']);
-
         mysqli_query($conn, "DELETE FROM `products` WHERE id = '$delete_id'") or die ('query failed');
         mysqli_query($conn, "DELETE FROM `cart` WHERE pid = '$delete_id'") or die ('query failed');
         mysqli_query($conn, "DELETE FROM `wishlist` WHERE pid = '$delete_id'") or die ('query failed');
-
         header('location:admin_product.php');
     }
-
     //update product
     if (isset($_POST['update_product'])) {
         $update_id = $_POST['update_id'];
@@ -61,7 +53,6 @@
         $update_image = $_FILES['update_image']['name'];
         $update_image_tmp_name = $_FILES['update_image']['tmp_name'];
         $update_image_folder = 'image/'.$update_image;
-
         $update_query = mysqli_query($conn, "UPDATE `products` SET `id` = '$update_id', `name` = '$update_name', `price` = '$update_price', `product_detail` = '$update_detail', `image` = '$update_image' WHERE id = '$update_id'") or die ('query failed');
         if ($update_query) {
             move_uploaded_file( $update_image_tmp_name, $update_image_folder);
@@ -74,7 +65,6 @@
         include 'style.css';
     ?>
 </style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,8 +117,7 @@
             <?php
                 $select_products = mysqli_query($conn, "SELECT * FROM `products`") or die ('query failed');
                 if (mysqli_num_rows($select_products) > 0) {
-                    while ($fetch_products = mysqli_fetch_assoc($select_products)) {
-                            
+                    while ($fetch_products = mysqli_fetch_assoc($select_products)) {            
             ?>
             <div class="box">
                 <img src="image/<?php echo $fetch_products['image']; ?>">
@@ -146,10 +135,8 @@
                                 <p>no products added yet!</p>
                             </div>
                         ';
-
                 }
-            ?>
-            
+            ?>   
         </div>
     </section>
     <div class="line"></div>
@@ -159,10 +146,7 @@
                 $edit_id = $_GET['edit'];
                 $edit_query = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$edit_id'") or die ('query failed');
                 if (mysqli_num_rows($edit_query) > 0) {
-                    while ($fetch_edit = mysqli_fetch_assoc($edit_query)) {
-
-                    
-                
+                    while ($fetch_edit = mysqli_fetch_assoc($edit_query)) {       
         ?>
         <form method = "POST" enctype = "multipart/form-data">
             <img src="image/<?php echo $fetch_edit['image']; ?>">

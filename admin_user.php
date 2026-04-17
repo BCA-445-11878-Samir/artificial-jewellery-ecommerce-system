@@ -2,32 +2,21 @@
     include 'connection.php';
     session_start();
     $admin_id = $_SESSION['admin_name'];
-
     if (!isset($admin_id)) {
         header('location:login.php');
     }
-   
     if (isset($_POST['logout'])) {
         session_destroy();
         header('location:login.php');
     }
-    
-
     //delete products to database
     if (isset($_GET['delete'])) {
         $delete_id = $_GET['delete'];
         mysqli_query($conn, "DELETE FROM `users` WHERE id = '$delete_id'") or die ('query failed');
-        $message[] = 'user removed successfully';
-        
+        $message[] = 'user removed successfully';  
         header('location:admin_user.php');
     }
-
 ?>
-<style type="text/css">
-    <?php 
-        include 'style.css';
-    ?>
-</style>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +27,7 @@
     <link rel="stylesheet" href="style.css">
     <title>admin pannel</title>
 </head>
-<body>
+<body> 
     <?php include 'admin_header.php';?>
    <?php
         if (isset($message)) {
@@ -52,17 +41,19 @@
             }
         }
     ?>
-    <div class="line4"></div>
+    <div class="report-bar">
+    <form action="export_users.php" method="GET" style="margin-bottom:15px;">
+        <button type="submit" class="btn">Download Excel Report</button>
+    </form>
+    </div>
+    <div class="line4"></div> 
     <section class="message-container">
         <h1 class="title">total user account</h1>
         <div class="box-container">
             <?php 
                 $select_users = mysqli_query($conn, "SELECT * FROM `users`") or die ('query failed');
                 if (mysqli_num_rows($select_users) > 0) {
-                    while ($fetch_users = mysqli_fetch_assoc($select_users)) {
-                        
-                    
-                
+                    while ($fetch_users = mysqli_fetch_assoc($select_users)) { 
             ?>
             <div class="box">
                 <p>user id: <span><?php echo $fetch_users['id']; ?></span></p>
@@ -78,7 +69,7 @@
                             <div class="empty">
                                 <p>no products added yet!</p>
                             </div>
-                        ';
+                    ';
                 }
             ?>
         </div>

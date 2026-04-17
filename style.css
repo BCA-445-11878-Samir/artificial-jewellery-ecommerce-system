@@ -1,11 +1,8 @@
-
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 :root{
     --box-shadow: 0px 0px 0px 6px rgb(255 255 255/40%);
     --orange: #fcc927;
@@ -42,7 +39,6 @@ ul{
     line-height: 2;
     color: var(--orange);
 }
-
 .line,
 .line4{
     background-image: url('img/5.png');
@@ -64,7 +60,6 @@ ul{
     margin-top: -3.5rem;
     margin-bottom: 7rem;
 }
-
 .message,
 .empty{
     text-align: center;
@@ -111,20 +106,20 @@ input[type=submit]{
 /* ----------form container--------------- */
 .form-container{
     background: var(--orange);
+    /* background: url('img/fri.png'); */
     width: 100%;
     min-height: 100vh;
     padding: 4rem 0;
     position: relative;
     min-height: 100vh;
 }
-
 .form-container::before,
 .show-products::before,
 .message-container::before,
 .order-container::before{
     content: '';
     position: absolute;
-    background: url('img/1.png');
+    /* background: url('img/fggg.png'); */
     top: -5%;
     left: -10px;
     width: 255px;
@@ -133,11 +128,10 @@ input[type=submit]{
     background-repeat: no-repeat;
     z-index: 100;
 }
-
 .form-container::after{
     content: '';
     position: absolute;
-    background: url('img/banner.png');
+    /* background: url('img/sju.png'); */
     bottom: 0;
     right: 0;
     width: 255px;
@@ -146,7 +140,6 @@ input[type=submit]{
     background-repeat: no-repeat;
     z-index: 1;
 }
-
 .form-container h1{
     text-transform: uppercase;
     margin: 2rem 0;
@@ -193,7 +186,7 @@ input[type=submit]{
     content: '';
     bottom: -18%;
     right: 0;
-    background-image: url('img/14.png');
+    /* background-image: url('img/14.png'); */
     width: 316px;
     height: 245px;
     background-size: 314px;
@@ -284,9 +277,8 @@ header .icons i:hover{
     transform: scale(0);
     transform-origin: top right;
     line-height: 2;
-
+    transition: transform 0.3s ease-in-out;
 }
-
 .logout-btn {
     background: #000;
     color: #fff;
@@ -296,29 +288,9 @@ header .icons i:hover{
 }
 .header .user-box.active{
     transform: scale(1.0);
-    transition: .2s linear;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* .header .user-box{
-    position: absolute;
-    top: 120%;
-    right: 2rem;
-    background: #fff;
-    padding: 1rem;
-    width: 250px;
-    border-radius: .5rem;
-
-    transform: scale(0);
-    opacity: 0;
-    pointer-events: none;
-    transition: .2s linear;
-}
-
-.header .user-box.active{
-    transform: scale(1);
-    opacity: 1;
-    pointer-events: auto;
-} */
 /* ----------admin dashboard----------- */
 .dashboard{
     background: var(--orange);
@@ -331,7 +303,6 @@ header .icons i:hover{
     content: '';
     top: -25%;
     left: -10px;
-    background-image: url('img/10.png');
     width: 225px;
     height: 220px;
     background-size: 225px;
@@ -378,13 +349,10 @@ header .icons i:hover{
 
 .show-products::before,
 .order-container::before{
-    background-image: url('img/14.png');
     top: -100px;
 }
 .show-products .box-container{
-    /* display: grid; */
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    /* gap: 1.5rem; */
 }
 .box-container .box{
     line-height: 2;
@@ -445,8 +413,6 @@ header .icons i:hover{
 .order-container {
     padding: 3% 7%;
 }
-
-
 .order-container .box-container{
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     justify-content: center;
@@ -477,7 +443,7 @@ header .icons i:hover{
     border-radius: 3px;
 }
 .order-container form input {
-    width: 40%;
+    width: 60%;
     border-radius: unset;
     border: none;
     background: var(--orange);
@@ -494,9 +460,55 @@ header .icons i:hover{
     padding: .7rem 4rem;
 }
 
+/* ===== Report Bar ===== */
 
+.report-bar{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    margin-top: -8rem;
+    margin-bottom: 5rem;
+}
 
+.report-bar form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0.1,0.1);
+}
 
+.report-bar .label{
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+}
+.report-bar input,
+.report-bar select{
+    padding: 6px 8px;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Button */
+
+.report-bar button{
+    padding: 8px 14px;
+    font-size: 13px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.report-bar button:hover{
+    background: #000;
+}
 /* ----------media screen----------- */
 @media(max-width: 991px) {
     #menu-btn {

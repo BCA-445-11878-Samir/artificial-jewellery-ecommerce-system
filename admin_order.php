@@ -1,18 +1,16 @@
 <?php
     include 'connection.php';
     session_start();
+    $today = date('Y-m-d');
+    $minDate = date('Y-m-d', strtotime('-1 year'));
     $admin_id = $_SESSION['admin_name'];
-
     if (!isset($admin_id)) {
         header('location:login.php');
     }
-   
     if (isset($_POST['logout'])) {
         session_destroy();
         header('location:login.php');
-    }
-    
-
+    }    
     //delete products to database
     if (isset($_GET['delete'])) {
         $delete_id = $_GET['delete'];
@@ -21,16 +19,11 @@
         
         header('location:admin_order.php');
     }
-
     //updating payment status
-
     if(isset($_POST['update_order'])) {
         $order_id = $_POST['order_id'];
         $update_payment = $_POST['update_payment'];
-
         mysqli_query($conn, "UPDATE `order` SET payment_status = '$update_payment' WHERE id='$order_id'") or die ('query failed');
-
-
     }
 
 ?>
@@ -39,7 +32,6 @@
         include 'style.css';
     ?>
 </style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,17 +55,28 @@
             }
         }
     ?>
-    <div class="line4"></div>
+    <div class="report-bar">
+<form method="GET" action="download_orders.php">
+<span class="label">From</span>
+<input type="date" name="from" min="<?= $minDate ?>" max="<?= $today ?>">
+<span class="label">To</span>
+<input type="date" name="to"   min="<?= $minDate ?>" max="<?= $today ?>">
+<select name="status">
+    <option value="">All</option>
+    <option value="pending">Pending</option>
+    <option value="complete">Completed</option>
+</select>
+<button type="submit">Download Excel Report</button>
+</form>
+</div>
+<div class="line4"></div>
     <section class="order-container">
         <h1 class="title">total order placed</h1>
         <div class="box-container">
             <?php 
                 $select_order = mysqli_query($conn, "SELECT * FROM `order`") or die ('query failed');
                 if (mysqli_num_rows($select_order) > 0) {
-                    while ($fetch_order = mysqli_fetch_assoc($select_order)) {
-                        
-                    
-                
+                    while ($fetch_order = mysqli_fetch_assoc($select_order)) {                        
             ?>
             <div class="box">
                 <p>user name: <span><?php echo $fetch_order['name']; ?></span></p>
@@ -94,8 +97,7 @@
                     </select>
                     <input type="submit" name="update_order" value="update payment" class="btn">
                     <a href="admin_order.php?delete=<?php echo $fetch_order['id']; ?>;" class="delete" onclick="return confirm('delete this message');">delete</a>
-                </form>
-                
+                </form>    
             </div>
             <?php 
                     }                   

@@ -29,18 +29,14 @@
                 </form>
             </div>
         </div>
-    
-
     </header>
     <div class="banner">
         <div class="detail">
             <h1>admin dashboard</h1>
-            <p>My grandparents hold a special place in my heart. My grandmother's gentle smile.</p>
+            <p>Welcome Admin — Manage your jewellery store efficiently and monitor all activities in real time.</p>
         </div>
-
     </div>
     <div class="line">
-
     </div>
 </body>    
 </html>

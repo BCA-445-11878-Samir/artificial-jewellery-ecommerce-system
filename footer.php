@@ -50,7 +50,9 @@
                     <i class="bi bi-envelope"></i>
                 </div>
                 <div class="social-links">
-                    <i class="bi bi-instagram"></i>
+                    <a href="https://www.instagram.com/iamsaamir" target="_blank">
+                        <i class="bi bi-instagram"></i>
+                    </a>
                     <i class="bi bi-youtube"></i>
                     <i class="bi bi-twitter"></i>
                     <i class="bi bi-behance"></i>

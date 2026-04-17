@@ -5,14 +5,11 @@
     if (!isset($user_id)) {
         header('location:login.php');
     }
-   
     if (isset($_POST['logout'])) {
         session_destroy();
         header('location:login.php');
-    }
-    
+    } 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +24,7 @@
     <div class="banner">
         <div class="detail">
             <h1>about us</h1>
-            <p>My grandparents hold a special place in my heart. My grandmother's gentle smile.</p>
+            <p>Discover elegant designs, explore new collections, and find the perfect jewellery to match your style.</p>
             <a href="index.php">home</a><span>/ about us</span>
         </div>
     </div>
@@ -38,10 +35,14 @@
         <div class="row">
             <div class="box">
                 <div class="title">
-                    <span>ABOUT OUR ONLINE STORE</span>
-                    <h1>Hello, With 25 years of experience</h1>
+                    <span>ABOUT OUR JEWELLERY STORE</span>
+                    <h1>Shine With Timeless Beauty</h1>
                 </div>
-                <p>Enjoy sweet, aromatic honey made by hardworking people of <br> encologically clean raw materials in the most pure environment!</p>
+                <p>
+                    We offer a stunning collection of artificial jewellery inspired by traditional 
+                    and modern designs. Each piece is carefully selected to bring grace, charm, 
+                    and confidence to your look at an affordable price.
+                </p>
             </div>
             <div class="img-box">
                 <img src="img/about3.jpg">
@@ -190,29 +191,39 @@
     <div class="line2"></div>
     <div class="ideas">
         <div class="title">
-            <h1>We And Our Client Are Happy To Cooperate With Our Company</h1>
+            <h1>Why Customers Love Our Jewellery</h1>
             <span>our features</span>
         </div>
         <div class="row">
             <div class="box">
-                <i class="bi bi-stack"></i>
+                <i class="bi bi-gem"></i>
                 <div class="detail">
-                    <h2>History of Beginning</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.</p>
+                    <h2>Premium Designs</h2>
+                    <p>
+                        Our jewellery collection features elegant, trendy, and 
+                        traditional designs crafted to enhance your beauty for 
+                        every occasion.
+                    </p>
                 </div>
             </div>
             <div class="box">
-                <i class="bi bi-grid-1x2-fill"></i>
+                <i class="bi bi-stars"></i>
                 <div class="detail">
-                    <h2>What We Really Do</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.</p>
+                    <h2>High Quality Products</h2>
+                    <p>
+                        We use high-quality materials to ensure durability, shine, 
+                        and comfort — giving you a luxurious look at an affordable price.
+                    </p>
                 </div>
             </div>
             <div class="box">
-                <i class="bi bi-tropical-storm"></i>
+                <i class="bi bi-truck"></i>
                 <div class="detail">
-                    <h2>Our Vision</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.</p>
+                    <h2>Fast & Safe Delivery</h2>
+                    <p>
+                        Get your favourite jewellery delivered safely to your doorstep 
+                        with secure packaging and quick shipping across India.
+                    </p>
                 </div>
             </div>
         </div>

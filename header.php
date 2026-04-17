@@ -24,7 +24,7 @@ if ($user_id) {
         <div class="flex">
             <a href="admin_pannel.php" class="logo"><img src="img/logo.png"></a>
             <nav class="navbar">
-                <a href="home.php">home</a>
+                <a href="index.php">home</a>
                 <a href="about.php">about us</a>
                 <a href="shop.php">shop</a>
                 <a href="order.php">order</a>
@@ -52,9 +52,6 @@ if ($user_id) {
                 </form>
             </div>
         </div>
-    
-
     </header>
-    
 </body>  
 </html>
