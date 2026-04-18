@@ -27,8 +27,8 @@ This is a web-based e-commerce application developed for selling artificial jewe
 ---
 
 ## 📂 Project Structure
-
-```artificial-jewellery-ecommerce-system/
+```
+artificial-jewellery-ecommerce-system/
 │── database/
 │ └── shop_db.sql
 │── image/
@@ -71,8 +71,8 @@ This is a web-based e-commerce application developed for selling artificial jewe
 │── verify_reset_otp.php
 │── view_page.php
 │── wishlist.php
-│── README.md```
-
+│── README.md
+```
 
 ---
 
