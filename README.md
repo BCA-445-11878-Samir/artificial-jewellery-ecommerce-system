@@ -4,6 +4,28 @@ This is a web-based e-commerce application developed for selling artificial jewe
 
 ---
 
+## 🎯 Project Objective
+
+The main objective of this project is to develop an online platform for buying artificial jewellery with secure authentication, user-friendly interface, and efficient order management system.
+
+---
+
+## 👥 User Roles
+
+### 👤 User
+- Register/Login with OTP
+- Browse products
+- Add to cart & wishlist
+- Place orders
+
+### 👨‍💼 Admin
+- Manage products
+- Manage users
+- View orders
+- Dashboard analytics
+
+---
+
 ## 🚀 Features
 
 - 🔐 User Registration & Login System
@@ -14,6 +36,69 @@ This is a web-based e-commerce application developed for selling artificial jewe
 - ✅ Form Validation (Client-side & Server-side)
 - 📦 Order Management System
 - 📬 Contact Form with Email Integration
+
+---
+
+## 🔐 Security Features
+
+- OTP-based email verification
+- Password encryption
+- Server-side validation
+- Protection against invalid inputs
+
+---
+
+## 📸 Project Screenshots
+
+### 🏠 Home Page
+![Home](snapshot/home_page.png)
+
+### 🔐 Login Page
+![Login](snapshot/login_page.png)
+
+### 🛍️ Shop Page
+![Shop](snapshot/shop_page.png)
+
+### 🛒 Cart Page
+![Cart](snapshot/cart_page.png)
+
+### 💳 Checkout Page
+![Checkout](snapshot/checkout_page1.png)
+
+### 👨‍💼 Admin Dashboard
+![Admin](snapshot/admin_dashboard_page.png)
+
+---
+
+## 📁 All Screenshots
+
+<details>
+<summary>Click to view all screenshots</summary>
+
+### 📄 Pages
+
+![About](snapshot/about_us_page.png)  
+![Product Detail](snapshot/product_detail_page.png)  
+![Register](snapshot/register_page.png)  
+![OTP Verify](snapshot/verify_register_otp_page.png)  
+![Reset OTP](snapshot/verify_reset_otp_page.png)  
+![New Password](snapshot/set_newpassword_page.png)  
+
+### 👨‍💼 Admin Panel
+
+![Admin Product](snapshot/add_delete_edit_product_page.png)  
+![Admin Orders](snapshot/admin_order_page.png)  
+![Admin Users](snapshot/admin_user_page.png)  
+![Admin Messages](snapshot/admin_message_page.png)  
+
+### 🛒 Shopping Flow
+
+![Wishlist](snapshot/wishlist_page.png)  
+![Order](snapshot/order_page_with_user_box.png)  
+![Invoice](snapshot/invoice_page.png)  
+![Order Confirmation](snapshot/order_confirmation_page.png)  
+
+</details>
 
 ---
 
@@ -81,13 +166,6 @@ artificial-jewellery-ecommerce-system/
 1. Install XAMPP/WAMP
 2. Copy project folder to:
 
----
-
-## ⚙️ Installation & Setup
-
-1. Install XAMPP/WAMP
-2. Copy project folder to:
-
 C:/xampp/htdocs/
 
 3. Open phpMyAdmin:
@@ -126,9 +204,35 @@ http://localhost/artificial-jewellery-ecommerce-system
 
 ---
 
+## ⚠️ Known Issues
+
+- GPS may not work on some browsers without permission
+- SMTP setup required for OTP functionality
+
+---
+
+## 🌐 Future Enhancements
+
+- Online payment integration (Razorpay/Stripe)
+- Mobile app version
+- Product review & rating system
+- AI-based product recommendation
+
+---
+
+## 🤝 Contribution
+
+Feel free to contribute or suggest improvements.
+
+## ⭐ Feedback
+
+If you like this project, give it a star ⭐ on GitHub.
+
+---
+
 ## 👨‍💻 Author
 
-**MD Samir Parwez**
+**Md Samir Parwez**
 
 ---
 
