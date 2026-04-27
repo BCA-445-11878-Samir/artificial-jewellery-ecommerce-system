@@ -36,6 +36,19 @@ The main objective of this project is to develop an online platform for buying a
 - ✅ Form Validation (Client-side & Server-side)
 - 📦 Order Management System
 - 📬 Contact Form with Email Integration
+- 🔄 Live Admin Dashboard (Real-Time Data Monitoring): The admin dashboard dynamically updates in real-time to     reflect user activities such as new orders, messages, and interactions, enabling efficient monitoring and quick decision-making.
+
+---
+
+## 📊 Report Generation Features
+- 📄 Invoice Download System:
+Users can download invoices at the time of checkout and also anytime later from their order history
+- 🧾 Order History Access:
+Users can view all their previous orders and re-download invoices whenever needed
+- 📥 Admin Report Download:
+Admin can download User Reports and Order Reports from the dashboard for analysis
+- 📊 Data Export Functionality:
+Reports can be exported in structured formats (such as Excel/CSV) for better record management
 
 ---
 
@@ -97,6 +110,11 @@ The main objective of this project is to develop an online platform for buying a
 ![Order](snapshot/order_page_with_user_box.png)  
 ![Invoice](snapshot/invoice_page.png)  
 ![Order Confirmation](snapshot/order_confirmation_page.png)  
+
+### 📊 Report Generation Features
+![Report](snapshot/order_report.png)  
+![Report](snapshot/user_report.png)  
+![Report](invoice_report.png)  
 
 </details>
 
