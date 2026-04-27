@@ -114,7 +114,7 @@ Reports can be exported in structured formats (such as Excel/CSV) for better rec
 ### 📊 Report Generation Features
 ![Report](snapshot/order_report.png)  
 ![Report](snapshot/user_report.png)  
-![Report](invoice_report.png)  
+![Report](snapshot/invoice_report.png)  
 
 </details>
 
